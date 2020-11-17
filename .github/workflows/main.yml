@@ -30,7 +30,7 @@ jobs:
       - run: npx typedoc -out bundles/docs
         continue-on-error: true
 
-      - name: Deploy Sources
+      - name: Deploy Sources 
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: self
