@@ -12,6 +12,8 @@ jobs:
   build:
     name: Bundle and Publish Sources
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
     strategy:
       matrix:
@@ -36,5 +38,4 @@ jobs:
           REPO: self
           BRANCH: gh-pages
           FOLDER: bundles
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
